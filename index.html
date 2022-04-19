@@ -62,7 +62,7 @@
 
 		<div id="header">
 			<div class="container">
-				<h3>US Citizenship Practise test</h3>
+				<h3>US Citizenship Practice test</h3>
 			</div>
 		</div>
 
@@ -84,7 +84,7 @@
 
 		<div id="answer">
 			<div class="container">
-				<h3 id="answer-text">Press any key to advance questions and answers</h3>
+				<h3 id="answer-text">Press any key, click, or tap to advance questions and answers</h3>
 			</div>
 		</div>
 
@@ -552,9 +552,9 @@
     advance();
   };
 
-  window.addEventListener('touchstart', function() {
+  window.addEventListener('pointerdown', function() {
     advance();
-  });
+  }, false);
 		</script>
 
 	</body>
