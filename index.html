@@ -526,7 +526,7 @@
 
   var i = 0;
 
-  document.onkeypress = function (e) {
+  function advance() {
     if (i % 2 == 0) {
         document.getElementById('question-text').innerHTML = questions[Math.floor(i/2)]["Question"];
         document.getElementById('answer-text').innerHTML = " ";
@@ -546,7 +546,15 @@
     if (i >= 200) {
         i = 0;
     }
+  }
+
+  document.onkeypress = function (e) {
+    advance();
   };
+
+  window.addEventListener('touchstart', function() {
+    advance();
+  });
 		</script>
 
 	</body>
